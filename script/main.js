@@ -11,6 +11,7 @@ dday_form.addEventListener("submit", function(e){
     let nowDay = new Date(); // Monday 29 Jan 11:53:24 +0900 GMT ..
 
     const userDate = document.querySelector("#first_date").value;
+
     let theDay = new Date(userDate);
     
     let nowTime = nowDay.getTime();
@@ -28,16 +29,27 @@ dday_form.addEventListener("submit", function(e){
     const inputDay = document.querySelector("#inputDay");
     const name_field1 = document.querySelector("#name1");
     const name_field2 = document.querySelector("#name2");
+    const specialDay1 = document.querySelector("#special1");
+    const specialDay2 = document.querySelector("#special2");
     
     // #passDay DOM 조작
     passDay.innerText = passedTime;
     inputDay.innerText = userDate 
 
+    // 날짜 연산하기-덧셈뺄셈
+    let afterDay1 = theDay.setDate(theDay.getDate() + 300);
+    let afterDay2 = theDay.setFullYear(theDay.getDate() + 1);
+    console.log(afterDay1, afterDay2);
+    
+    specialDay1.innerText = afterDay1.toLocaleString(); // 300일
+    specialDay2.innerText = afterDay1.toLocaleString(); // 1년일
+    
     // console.dir(resultDiv);
     name_field1.innerText = man;
     name_field2.innerText = woman;
     resultDiv.classList.remove("d-none");    
 
+    first
     // 300일, 1주년 기념일 filed에 Date를 출력!
     // 새로운 기능들 추가 (계획)
     // 광고수익 : google Ads
