@@ -39,6 +39,7 @@ dday_form.addEventListener("submit", function(e){
     // 날짜 연산하기-덧셈뺄셈
     let afterDay1 = theDay.setDate(theDay.getDate() + 300);
     let afterDay2 = theDay.setFullYear(theDay.getDate() + 1);
+    
     console.log(afterDay1, afterDay2);
     
     specialDay1.innerText = afterDay1.toLocaleString(); // 300일
@@ -48,8 +49,6 @@ dday_form.addEventListener("submit", function(e){
     name_field1.innerText = man;
     name_field2.innerText = woman;
     resultDiv.classList.remove("d-none");    
-
-    first
     // 300일, 1주년 기념일 filed에 Date를 출력!
     // 새로운 기능들 추가 (계획)
     // 광고수익 : google Ads
